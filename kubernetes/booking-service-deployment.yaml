@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booking-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-service
+  template:
+    metadata:
+      labels:
+        app: booking-service
+    spec:
+      containers:
+        - name: booking-service
+          image: 22i1315/booking-service
+          ports:
+            - containerPort: 5003
+          env:
+            - name: BOOKING_DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: booking-config
+                  key: BOOKING_DB_URL
+            - name: FLASK_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: booking-secrets
+                  key: FLASK_SECRET_KEY

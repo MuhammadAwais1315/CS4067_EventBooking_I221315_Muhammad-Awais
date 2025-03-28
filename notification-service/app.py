@@ -1,9 +1,9 @@
-import os
 import pika
 import json
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
-from config.mongo import get_mongo_client
+from pymongo import MongoClient
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,10 +18,18 @@ app.config['MAIL_PASSWORD'] = os.getenv("MAIL_PASSWORD")
 app.config['MAIL_USE_TLS'] = True
 mail = Mail(app)
 
+
+def get_mongo_client():
+    mongo_url = os.getenv("MONGO_URL")
+    mongo_port = int(os.getenv("MONGO_PORT"))
+    return MongoClient(host=mongo_url, port=mongo_port)
+
 # MongoDB setup
 mongo_client = get_mongo_client()
 db = mongo_client[os.getenv("MONGO_DB")]
 notifications_collection = db.notifications
+
+
 
 def send_confirmation_email(booking_data):
     """Send email using Flask-Mail with proper app context"""
@@ -103,4 +111,4 @@ if __name__ == "__main__":
     threading.Thread(target=consume_booking_events, daemon=True).start()
     
     # Start Flask app
-    app.run(port=5004)
+    app.run(host="0.0.0.0", port=5004)

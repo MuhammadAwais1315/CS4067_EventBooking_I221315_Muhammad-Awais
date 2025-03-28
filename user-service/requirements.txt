@@ -1,9 +1,11 @@
 fastapi
+uvicorn
 sqlalchemy
-httpx
-python-jose[cryptography]
+passlib
 python-dotenv
-passlib[bcrypt]
-bson
-psycopg2
+python-jose[cryptography]
+httpx
+pydantic
+pymongo
 bcrypt
+psycopg2-binary

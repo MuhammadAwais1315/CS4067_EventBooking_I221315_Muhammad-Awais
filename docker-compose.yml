@@ -4,8 +4,8 @@ services:
       22i1315/user-service
     restart: always
     environment:
-      USER_DB_URL: postgresql://awais:1122@localhost:5434/userdb
-      SECRET_KEY: yyour-secure-key-123
+      USER_DB_URL: postgresql://awais:1122@user_db:5432/userdb
+      SECRET_KEY: your-secure-key-123
     ports:
       - "8000:8000"
     networks:
@@ -17,6 +17,8 @@ services:
     image:
       22i1315/event-service
     restart: always
+    environment:
+      MONGO_URI : mongodb://mongo_db:27017
     ports:
       - "5000:5000"
     networks:
@@ -29,7 +31,7 @@ services:
       22i1315/booking-service
     restart: always
     environment:
-      BOOKING_DB_URL: postgresql://awais:1122@localhost:5435/bookingdb
+      BOOKING_DB_URL: postgresql://awais:1122@booking_db:5432/bookingdb
       FLASK_SECRET_KEY: your-secret-key
     ports:
       - "5003:5003"
@@ -44,6 +46,17 @@ services:
     restart: always
     ports:
       - "5004:5004"
+    environment:
+      MONGO_URL : mongo_db
+      MONGO_PORT: 27017
+      MONGO_DB: notifications_db
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      MAIL_SERVER: smtp.gmail.com
+      MAIL_PORT: 587
+      MAIL_USERNAME: mydevops.service@gmail.com
+      MAIL_PASSWORD: yfqs lyve tsyn joyl
+
     networks:
       - app-network
     depends_on:
@@ -59,7 +72,7 @@ services:
       POSTGRES_PASSWORD: 1122
       POSTGRES_DB: bookingdb
     ports:
-      - "5435:5434"
+      - "5435:5432"
     networks:
       - app-network
     volumes:
@@ -73,7 +86,7 @@ services:
       POSTGRES_PASSWORD: 1122
       POSTGRES_DB: userdb
     ports:
-      - "5434:5434"
+      - "5434:5432"
     networks:
       - app-network
     volumes:

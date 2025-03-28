@@ -1,10 +1,7 @@
 from flask import Flask, request, jsonify
-from pymongo import MongoClient
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from models import Booking, Base
-import pika
-import json
 import os
 from dotenv import load_dotenv
 import logging
@@ -17,15 +14,14 @@ app = Flask(__name__)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("BookingService")
 
 # Database configuration
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("BOOKING_DB_URL")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
 
-NOTIFICATION_SERVICE_URL = "http://localhost:5004/send-email"
+NOTIFICATION_SERVICE_URL = "http://notification-service:5004/send-email"
 
 def notify_user(booking_id, user_email):
     """Send booking confirmation request to the Notification Service"""
@@ -37,24 +33,24 @@ def notify_user(booking_id, user_email):
         response = requests.post(f"{NOTIFICATION_SERVICE_URL}", json=payload)
 
         if response.status_code == 200:
-            logger.info(f"✅ Notification sent successfully: {payload}")
+            logging.info(f"✅ Notification sent successfully: {payload}")
         else:
-            logger.error(f"❌ Failed to send notification: {response.text}")
+            logging.error(f"❌ Failed to send notification: {response.text}")
 
     except Exception as e:
-        logger.error(f"❌ Error calling Notification Service: {str(e)}")
+        logging.error(f"❌ Error calling Notification Service: {str(e)}")
 
 @app.route('/bookings', methods=['POST'])
 def create_booking():
     """Create a new booking and publish confirmation event"""
     data = request.get_json()
-    logger.debug(f"Incoming request data: {data}")
+    logging.debug(f"Incoming request data: {data}")
 
     # Validate required fields
     required_fields = ["user_id", "event_id", "tickets", "amount", "user_email"]
     for field in required_fields:
         if field not in data:
-            logger.error(f"Missing required field: {field}")
+            logging.error(f"Missing required field: {field}")
             return jsonify({"error": f"Missing required field: {field}"}), 400
 
     db = SessionLocal()
@@ -71,7 +67,7 @@ def create_booking():
         db.add(booking)
         db.commit()
         db.refresh(booking)
-        logger.info(f"Booking created: ID {booking.id}")
+        logging.info(f"Booking created: ID {booking.id}")
 
         # Publish confirmation event
         notify_user(
@@ -90,11 +86,11 @@ def create_booking():
 
     except Exception as e:
         db.rollback()
-        logger.error(f"Booking creation failed: {str(e)}")
+        logging.error(f"Booking creation failed: {str(e)}")
         return jsonify({"error": "Internal server error"}), 500
 
     finally:
         db.close()
 
 if __name__ == '__main__':
-    app.run( port=5003)
+    app.run(host="0.0.0.0", port=5003)

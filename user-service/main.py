@@ -13,8 +13,8 @@ import httpx
 from fastapi import HTTPException, status
 
 # Add configuration
-EVENT_SERVICE_URL = "http://localhost:5000/api/events" 
-BOOKING_SERVICE_URL = "http://localhost:5003/bookings"
+EVENT_SERVICE_URL = "http://event-service:5000/events" 
+BOOKING_SERVICE_URL = "http://booking-service:5003/bookings"
 
 app = FastAPI()
 
@@ -28,7 +28,7 @@ app.add_middleware(
 )
 
 # Configure logging
-logging.basicConfig(filename='user-service.log', level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
 # ========== Pydantic Models ==========
 class UserRegister(BaseModel):
@@ -228,3 +228,22 @@ async def get_events(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="Event service unavailable"
         )
+
+class Event(BaseModel):
+    name: str
+    location: str = ""
+    date: str = ""
+    price: float = 0.0
+    tickets_available: int = 0
+    description: str = ""
+    picture: str = "https://via.placeholder.com/400x250"
+
+@app.post("/create")
+async def create(event: Event):
+    url = f"{EVENT_SERVICE_URL}/create"  # Update this if Flask runs on a different host/port
+    async with httpx.AsyncClient() as client:
+        response = await client.post(url, json=event.model_dump())
+        return {
+            "status_code": response.status_code,
+            "response": response.json()
+        }

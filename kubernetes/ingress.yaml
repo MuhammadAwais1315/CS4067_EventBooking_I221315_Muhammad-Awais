@@ -1,20 +1,40 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: onlineeventbooking-ingress
-  namespace: onlineeventbooking-muhammadawais
+  name: app-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
+  ingressClassName: nginx  # <-- Add this line
   rules:
-    - host: onlineeventbooking.local
+    - host: localdev.me
       http:
         paths:
-          - path: /
+          - path: /user(/|$)(.*)
             pathType: Prefix
             backend:
               service:
                 name: user-service
                 port:
                   number: 8000
-         
+          - path: /event(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: event-service
+                port:
+                  number: 5000
+          - path: /booking(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: booking-service
+                port:
+                  number: 5003
+          - path: /notification(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: notification-service
+                port:
+                  number: 5004

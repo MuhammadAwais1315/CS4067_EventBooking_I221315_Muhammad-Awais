@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      containers:
+        - name: notification-service
+          image: 22i1315/notification-service
+          ports:
+            - containerPort: 5004
+          env:
+            - name: MONGO_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: MONGO_URL
+            - name: MONGO_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: MONGO_PORT
+            - name: MONGO_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: MONGO_DB
+            - name: RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: RABBITMQ_HOST
+            - name: RABBITMQ_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: RABBITMQ_PORT
+            - name: MAIL_SERVER
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: MAIL_SERVER
+            - name: MAIL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-config
+                  key: MAIL_PORT
+            - name: MAIL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: MAIL_USERNAME
+            - name: MAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: notification-secrets
+                  key: MAIL_PASSWORD

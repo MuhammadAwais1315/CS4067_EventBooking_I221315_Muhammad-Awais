@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}All Events{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" name="search" 
+                   placeholder="Search events..." value="{{ search_query }}">
+            <button class="btn btn-outline-primary" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for event in events %}
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="{{ event.picture }}" class="card-img-top" alt="{{ event.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ event.name }}</h5>
+                <p class="card-text text-muted">
+                    <i class="fas fa-map-marker-alt"></i> {{ event.location }}<br>
+                    <i class="fas fa-calendar-alt"></i> {{ format_date(event.date) }}
+                </p>
+                <p class="card-text">{{ event.description[:100] }}...</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-success">${{ event.price }}</span>
+                    <span class="badge bg-info">{{ event.tickets_available }} tickets left</span>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent">
+                <a href="{{ url_for('event_detail', event_id=event._id) }}" 
+                   class="btn btn-primary btn-sm">
+                    View Details
+                </a>
+                <a href="{{ url_for('add_to_cart', event_id=event._id) }}" 
+                   class="btn btn-outline-success btn-sm">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12">
+        <div class="alert alert-info">No events found matching your search.</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if total_pages > 1 %}
+<nav class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% for p in range(1, total_pages + 1) %}
+        <li class="page-item {% if p == page %}active{% endif %}">
+            <a class="page-link" href="?page={{ p }}&search={{ search_query }}">{{ p }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}

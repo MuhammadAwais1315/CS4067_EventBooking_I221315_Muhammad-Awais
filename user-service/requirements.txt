@@ -1,0 +1,9 @@
+fastapi
+sqlalchemy
+httpx
+python-jose[cryptography]
+python-dotenv
+passlib[bcrypt]
+bson
+psycopg2
+bcrypt

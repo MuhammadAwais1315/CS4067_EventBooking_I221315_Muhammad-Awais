@@ -1,0 +1,111 @@
+services:
+  user-service:
+    image:
+      22i1315/user-service
+    restart: always
+    environment:
+      USER_DB_URL: postgresql://awais:1122@localhost:5434/userdb
+      SECRET_KEY: yyour-secure-key-123
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    depends_on:
+      - user_db
+
+  event-service:
+    image:
+      22i1315/event-service
+    restart: always
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    depends_on:
+      - mongo_db
+
+  booking-service:
+    image:
+      22i1315/booking-service
+    restart: always
+    environment:
+      BOOKING_DB_URL: postgresql://awais:1122@localhost:5435/bookingdb
+      FLASK_SECRET_KEY: your-secret-key
+    ports:
+      - "5003:5003"
+    networks:
+      - app-network
+    depends_on:
+      - booking_db
+
+  notification-service:
+    image:
+      22i1315/notification-service
+    restart: always
+    ports:
+      - "5004:5004"
+    networks:
+      - app-network
+    depends_on:
+      - rabbitmq
+      - mongo_db
+
+
+  booking_db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: awais
+      POSTGRES_PASSWORD: 1122
+      POSTGRES_DB: bookingdb
+    ports:
+      - "5435:5434"
+    networks:
+      - app-network
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  user_db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: awais
+      POSTGRES_PASSWORD: 1122
+      POSTGRES_DB: userdb
+    ports:
+      - "5434:5434"
+    networks:
+      - app-network
+    volumes:
+      - user-data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - app-network
+
+  mongo_db:
+    image: mongo:6.0
+    restart: always
+  
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+    volumes:
+      - mongo-data:/data/db
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+  mongo-data:
+  user-data:

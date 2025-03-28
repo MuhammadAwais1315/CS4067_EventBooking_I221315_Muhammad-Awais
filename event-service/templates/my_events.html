@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}My Events{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">My Events</h2>
+{% if events %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for event in events %}
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="{{ event.picture }}" class="card-img-top" alt="{{ event.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ event.name }}</h5>
+                <p class="card-text text-muted">
+                    <i class="fas fa-map-marker-alt"></i> {{ event.location }}<br>
+                    <i class="fas fa-calendar-alt"></i> {{ format_date(event.date) }}
+                </p>
+                <p class="card-text">{{ event.description[:100] }}...</p>
+            </div>
+            <div class="card-footer bg-transparent">
+                <a href="{{ url_for('event_detail', event_id=event._id) }}" class="btn btn-primary btn-sm">
+                    View Details
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info">You haven't created any events yet.</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Edit Event{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4">Edit Event</h2>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Event Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ event.name }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" value="{{ event.location }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ event.date }}" required>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="price" class="form-label">Price ($)</label>
+                    <input type="number" step="0.01" class="form-control" id="price" name="price" value="{{ event.price }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="tickets_available" class="form-label">Tickets Available</label>
+                    <input type="number" class="form-control" id="tickets_available" name="tickets_available" value="{{ event.tickets_available }}" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="4" required>{{ event.description }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="picture" class="form-label">Event Picture URL</label>
+                <input type="url" class="form-control" id="picture" name="picture" value="{{ event.picture }}" placeholder="https://example.com/image.jpg">
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+            <a href="{{ url_for('event_detail', event_id=event._id) }}" class="btn btn-secondary">
+                <i class="fas fa-times"></i> Cancel
+            </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

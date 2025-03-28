@@ -1,0 +1,93 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:35:24] "POST /payments HTTP/1.1" 200 -
+INFO:root:Booking 1 confirmed
+ERROR:root:Booking failed: Object of type InstanceState is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:35:24] "[35m[1mPOST /bookings HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:40:59] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:42:16] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:43:30] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:51:58] "[33mPOST /bookings%0A HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:54:12] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:55:24] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:55:41] "[33mPOST /bookings%0A HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+DEBUG:app:Request Data: b'{"user_id": 1, "event_id": 100, "tickets": 2, "amount": 50.0}'
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:56:42] "POST /payments HTTP/1.1" 200 -
+INFO:root:Booking 2 confirmed
+ERROR:root:Booking failed: Object of type InstanceState is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 22:56:42] "[35m[1mPOST /bookings HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\database.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:04:08] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:04:22] "[33mPOST /bookings%0A HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:05:36] "[31m[1mGET /bookings HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:05:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:05:41] "[31m[1mGET /bookings HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:05:46] "[33mGET /booking HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:07:01] "[31m[1mPOST /bookings HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:07:41] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:08:00] "[33mPOST /bookings%0A HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:11:52] "[33mGET /test HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2025 23:15:11] "[31m[1mPOST /bookings HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\models.py', reloading
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 930-257-074
+INFO:werkzeug: * Detected change in 'G:\\DevOPs\\booking\\app.py', reloading
+INFO:werkzeug: * Restarting with stat

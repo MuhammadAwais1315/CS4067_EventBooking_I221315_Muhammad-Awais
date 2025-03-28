@@ -1,0 +1,230 @@
+ERROR:fastapi:Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: user@example.com
+INFO:root:New user registered: awais82275@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: user1@example.com
+INFO:root:New user registered: gsafdf@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: agsfgf1a@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: awais@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:User Login: awais@gmail.com
+INFO:root:User Login: awais@gmail.com
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\deeepseek\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:User Login: awais@gmail.com
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5003/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5003/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5003/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 404 NOT FOUND"
+ERROR:root:Booking service error: Client error '404 NOT FOUND' for url 'http://localhost:5003/bookings'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 404 NOT FOUND"
+ERROR:root:Booking service error: Client error '404 NOT FOUND' for url 'http://localhost:5003/bookings'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 400 BAD REQUEST"
+ERROR:root:Booking service error: Client error '400 BAD REQUEST' for url 'http://localhost:5003/bookings'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 400 BAD REQUEST"
+ERROR:root:Booking service error: Client error '400 BAD REQUEST' for url 'http://localhost:5003/bookings'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 500 INTERNAL SERVER ERROR"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 500 INTERNAL SERVER ERROR"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 500 INTERNAL SERVER ERROR"
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\user-service\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: test@gmail.com
+INFO:root:User Login: test@gmail.com
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d68860d3e01e783d9e8b33 "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d68860d3e01e783d9e8b33 "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67c5d783c5e22a79f73e8b73 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\user-service\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: i210554@nu.edu.pk
+INFO:root:User Login: i210554@nu.edu.pk
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "G:\DevOPs\user-service\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:root:New user registered: a1@gmail.com
+INFO:root:User Login: a1@gmail.com
+INFO:root:User Login: a1@gmail.com
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d695c9fdb55bc9056a3b85/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/api/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: POST http://localhost:5000/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 302 FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: PUT http://localhost:5000/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: PUT http://localhost:5000/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events?search=&page=1 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: PUT http://localhost:5000/api/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 404 NOT FOUND"
+INFO:httpx:HTTP Request: GET http://localhost:5000/api/events/67d6a07259d34f571bdc814e "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:5003/bookings "HTTP/1.1 201 CREATED"
+INFO:httpx:HTTP Request: PUT http://localhost:5000/api/events/67d6a07259d34f571bdc814e/edit "HTTP/1.1 200 OK"
